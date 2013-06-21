@@ -20,7 +20,7 @@
 *.ps
 *.snm
 *.synctex.gz
-.thm
+*.thm
 *.toc
 *.vrb
 *.maf
