@@ -1,0 +1,36 @@
+BIBTEX   ?= bibtex
+DVIPDFMX ?= dvipdfmx
+LATEX    ?= latex
+
+# 区分是 Windows 环境还是类 UNIX 环境。
+# 如果是后者，则 GNU make 将可以检测到已经定义 PATH 环境变量。
+ifdef PATH
+MAKE = make
+RM   = rm -f
+else
+MAKE = mingw32-make
+RM   = del
+endif
+
+## 'make view' 用默认阅读器查看 PDF
+OS = $(shell uname -s)
+ifeq ($(OS),Darwin)
+VIEW_PDF ?= open
+else
+VIEW_PDF ?= xdg-open
+endif
+
+all: pdf
+
+pdf:
+	$(LATEX) $(JOBNAME)
+	$(BIBTEX) $(JOBNAME)
+	$(LATEX) $(JOBNAME)
+	$(LATEX) $(JOBNAME)
+	$(DVIPDFMX) $(JOBNAME).dvi
+
+clean:
+	$(RM) $(JOBNAME).{aux,bbl,bcf,blg,dvi,lof,log,lot,run.xml,thm,toc,out{,.bak}} {missfont,texput}.log {body,appendix}/*.aux
+
+view: $(JOBNAME).pdf
+	$(VIEW_PDF) $(JOBNAME).pdf
