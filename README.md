@@ -26,7 +26,7 @@ _TJUTHSS_ 并不是一个重新实现的模板，因为 _[tjuthesis][tjuthesis]_
 
     git clone git@github.com:itolssy/tjuthesis.git
  
-修改 **preface/cover.tex** 中的相关个人信息和摘要，修改正文（**body**）、参考文献（**references**）、附录（**appendix**）、以及 **tjumain.tex** 中的相关信息，图片放在 **figures** 目录里，然后编译（默认使用 `pdflatex` ）:
+修改 **preface/cover.tex** 中的相关个人信息和摘要，修改正文（ **body/** ）、参考文献（ **references/** ）、附录（ **appendix/** ）、以及 **tjumain.tex** 中的相关信息，图片放在 **figures** 目录里，然后编译（默认使用 `pdflatex` ）:
 
     make
     
