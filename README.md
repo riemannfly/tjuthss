@@ -16,8 +16,8 @@ _TJUTHSS_ 并不是一个重新实现的模板，因为 _[tjuthesis][tjuthesis]_
 5. 参考文献 `references/*`
 6. 附录 `appendix/*`
 7. 论文格式配置文件 `setup/*`, `gb_452.cpx`, `TJUThesis.bst`
-8. Makefiles `_makefile_include\*`, `makefile`, `*.bat`
-9. 天津大学学位论文格式要求 `_official_docs\*`
+8. Makefiles `_makefile_include/*`, `makefile`, `*.bat`
+9. 天津大学学位论文格式要求 `_official_docs/*`
 0. 字体 `*.ttf`, `*.ttc`
 
 ## 运行
